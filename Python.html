@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        .code-area {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #f9f9f9;
+        }
+        .output-area {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #e6ffe6;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Biodata</a></li>
+                <li><a href="python.html" target="_blank">Python</a></li>
+                <li><a href="linear-algebra.html" target="_blank">Linear Algebra</a></li>
+                <li><a href="introduction-to-computer.html" target="_blank">Introduction to Computer</a></li>
+                <li><a href="communication-ethics.html" target="_blank">Communication and Ethics</a></li>
+                <li><a href="books-club.html" target="_blank">Books and Club</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <a href="#portfolio" class="portfolio-btn">Portfolio</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Python Subject</h1>
+            <p>Explore the Python programming.</p>
+        </header>
+
+        <!-- Teacher and TA Profiles -->
+        <section id="Teachers" class="Teachers">
+            <h2>Teachers</h2>
+            <div class="profile">
+                <img src="kushal-shah.webp" alt="Teacher Photo" class="Teachers-photo">
+                <p><strong>Teacher:</strong> Prof. Kushal Shah</p>
+            </div>
+            <div class="profile">
+                <img src="nitin-kushwaha.webp" alt="TA Photo" class="Teachers-photo">
+                <p><strong>TA:</strong> Nitin Kushwaha</p>
+            </div>
+            <div class="profile">
+                <img src="rakshit-rohan.webp" alt="TA Photo" class="Teachers-photo">
+                <p><strong>TA:</strong> Rakshit Rohan</p>
+            </div>
+        </section>
+
+        <!-- Course Progress and About Section -->
+        <section id="about-python" class="about-python">
+            <h2>About Python Course</h2>
+            <p>Python is a high-level, interpreted programming language known for its simplicity, versatility, and extensive libraries for various applications.</p>
+            <p><strong>My Interest:</strong> I have a keen interest in Python programming, drawn to its simplicity and versatility. I enjoy exploring web development, data analysis, and automation, continually enhancing my skills and knowledge in coding.</p>
+            <p><strong>Number of concepts Completed:</strong> Till fifth concept</p>
+        </section>
+
+        <!-- Coding Section -->
+        <section id="coding-section" class="coding-section">
+            <h2>Practice Coding</h2>
+            <p>Try solving this Python problem below:</p>
+            <div class="code-area">
+                <label for="user-input">Write a Python function to add two numbers:</label>
+                <textarea id="user-input" rows="6" cols="50" placeholder="def add_numbers(a, b):\n    return a + b"></textarea>
+                <button onclick="executeCode()">Run Code</button>
+            </div>
+            <div class="output-area" id="output-area">
+                <p><strong>Output:</strong> <span id="output"></span></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Function to execute code from the textarea
+        function executeCode() {
+            const userCode = document.getElementById("user-input").value;
+            try {
+                // Create a function to encapsulate user code
+                const result = eval((function() { ${userCode}; return add_numbers(5, 3); })());
+                document.getElementById("output").textContent = result;
+            } catch (error) {
+                document.getElementById("output").textContent = "Error in code: " + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
